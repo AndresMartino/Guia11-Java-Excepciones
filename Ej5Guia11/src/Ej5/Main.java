@@ -8,14 +8,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n").useLocale(Locale.US);
         int num = (int) (Math.random() * 500) + 1;
-        int c = 0;
+        int c = 0, n;
         boolean band = false;
         System.out.println("--ADIVINA EL NUMERO--");
         do {
             try {
-                c++;
+
                 System.out.println("Ingrese Numero: ");
-                int n = read.nextInt();
+                c++;
+                n = read.nextInt();
                 if (n < num) {
                     System.out.println("El numero a adivinar es mas grande!");
                 } else if (n > num) {
@@ -25,9 +26,10 @@ public class Main {
                     band = true;
                 }
             } catch (InputMismatchException e) {
-                //System.out.println(e.getClass().getSimpleName());
+                /*System.out.println(e.getMessage());
+                System.out.println(e.getClass().getSimpleName());*/
                 read.next();
-                System.err.println("ERROR! tipo incorrecto de dato");
+                System.out.println("ERROR! tipo incorrecto de dato");
 
             }
         } while (!band);

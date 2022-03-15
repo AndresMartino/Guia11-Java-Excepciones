@@ -64,12 +64,19 @@ public class Main {
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.err.println("Error de Tipos");
+                read.next();
+                System.out.println("La opcion debe ser un entero");
 
             } catch (NumberFormatException e) {
-                System.err.println("Error de tipos2");
+               // read.next();
+                System.out.println("Deben ser enteros los numeros");
+
             } catch (ArithmeticException e) {
-                System.err.println("ERROR division por cero");
+                //read.next();
+                System.out.println("ERROR division por cero");
+
+            } finally {
+                System.out.println();
             }
         } while (opc != 5);
 

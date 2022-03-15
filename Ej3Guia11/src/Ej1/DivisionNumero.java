@@ -12,7 +12,7 @@ package Ej1;
 public class DivisionNumero {
     
     
-    public double division  (int n1, int n2) throws ArithmeticException{
+    public static int division  (int n1, int n2) {
         return n1/n2;
     
     }
